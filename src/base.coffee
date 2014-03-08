@@ -396,7 +396,7 @@ class TreemaNode
       e.preventDefault()
     return if editing
     e.preventDefault()
-    @removeSelectedNodes()
+
 
   onEscapePressed: ->
     return unless @isEditing()
