@@ -394,7 +394,6 @@ class TreemaNode
       @select()
       @removeSelectedNodes()
       e.preventDefault()
-      console.log e
     return if editing
     e.preventDefault()
     @removeSelectedNodes()
