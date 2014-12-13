@@ -28,9 +28,10 @@
   };
   var port = ar.port || 9485;
   var host = br.server || window.location.hostname;
+  var protocol = (window.location.protocol == 'http') ? 'ws' : 'wss';
 
   var connect = function(){
-    var connection = new WebSocket('ws://' + host + ':' + port);
+    var connection = new WebSocket(protocol + '://' + host + ':' + port);
     connection.onmessage = function(event){
       if (ar.disabled) return;
       var message = event.data;
