@@ -7,7 +7,7 @@
 
 /* Source: http://stackoverflow.com/questions/10434001/static-files-with-express-js */
 
-module.exports.startServer = startServer = function() {
+module.exports.startServer = startServer = function(port, path, callback) {
   var express = require('express');
   var app = express();
   var path = require('path');
@@ -39,6 +39,7 @@ module.exports.startServer = startServer = function() {
   
   app.listen(9090);
   console.log('Listening on port 9090');
+  callback(); // fire callback, so brunch will initialize watcher
   return app;
 };
 
